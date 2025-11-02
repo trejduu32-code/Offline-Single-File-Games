@@ -61,14 +61,12 @@ const wait = document.getElementById("wait");
 const divcontainer = document.getElementById('button-container');
 
 
-const c={311593497:"F8JGZ6Pf9sXAPKmET3J4utmFNKJKtJvBjfmXknF2",311596766:"0k5Wot0PeUvqCxNpvxHGYDV9fZ4xPNiVOEsX0Qmv",311597813:"hUrKATII3IP0wxTRlLlxIIpwrfW6tPoH31k14ZyN",311598383:"XZ8OCJ7t5TqgbEvfDNx7kHpuhIUkL3tM6kr8cfyx",311599248:"4hKuqCPYGNUCfnDXfKSs74cru68iq13uN495Aj2e",311599839:"bXK9HuOPSonemdvIyv7YqnBNW51vw3lPCZjfkpML",311664165:"i29YQVhlzcHVL0mp1pEJbXdS1EzTL4gySto1YmfU",311601733:"A1FdmNOWmLr02KKvowg1Sbm9anm2i68fffkqcvJH",316762989:"Fa7IBdata396i2fhZMitbOnDCaE0jScc70ogvxxL",316964249:"qNZsdQFxbVTFcfGMaUJBSWaHkdssCgMA9e0RxLvY",316763559:"9WbDTOPwvWFhP3t4I7IHQoPhnPQh9f9kTc6rZVZ8",316763931:"z6vME2LYmajjEVoD5WTRhV09uMW6HvA8Yclf65QN",316764328:"d0Cl3nJBkQFg0cdt1PZh7gGsgQiuF6262Rja2F2H",316764600:"KWCx1ZpcOnDV4JhVdtnkhQZpZ7yxnZxCYTf1qHbO"};
+const c=new Map([["311593497","F8JGZ6Pf9sXAPKmET3J4utmFNKJKtJvBjfmXknF2"],["311596766","0k5Wot0PeUvqCxNpvxHGYDV9fZ4xPNiVOEsX0Qmv"],["311597813","hUrKATII3IP0wxTRlLlxIIpwrfW6tPoH31k14ZyN"],["311598383","XZ8OCJ7t5TqgbEvfDNx7kHpuhIUkL3tM6kr8cfyx"],["311599248","4hKuqCPYGNUCfnDXfKSs74cru68iq13uN495Aj2e"],["311599839","bXK9HuOPSonemdvIyv7YqnBNW51vw3lPCZjfkpML"],["311664165","i29YQVhlzcHVL0mp1pEJbXdS1EzTL4gySto1YmfU"],["311601733","A1FdmNOWmLr02KKvowg1Sbm9anm2i68fffkqcvJH"],["316762989","Fa7IBdata396i2fhZMitbOnDCaE0jScc70ogvxxL"],["316964249","qNZsdQFxbVTFcfGMaUJBSWaHkdssCgMA9e0RxLvY"],["316763559","9WbDTOPwvWFhP3t4I7IHQoPhnPQh9f9kTc6rZVZ8"],["316763931","z6vME2LYmajjEVoD5WTRhV09uMW6HvA8Yclf65QN"],["316764328","d0Cl3nJBkQFg0cdt1PZh7gGsgQiuF6262Rja2F2H"],["316764600","KWCx1ZpcOnDV4JhVdtnkhQZpZ7yxnZxCYTf1qHbO"],["318989239","2LE4wjwMDXEkOk4bizPAxr4iCi0N0GUyNKWm1JSM"],["319006400","GRhWPQ7Q3QA3kqUYRxXLh1OQtxhBQxQPBVV3DOyz"],["318999932","oojIHMHRWsQnmm4EGA07nWmq1qEG6rQUqCeBbkLv"],["319000721","SACU6lCSYw6fD0N73FkqKKS9K2ymwDuC7Tvugd2g"]]),
+
+f=Array.from(c.entries()).map((([f,m])=>r("68747470733a2f2f63616e7661732e696e7374727563747572652e636f6d2f66696c65732f")+f+r("2f646f776e6c6f61643f646f776e6c6f61645f6672643d312676657269666965723d")+m));
 
 
-
-const f = Object.entries(c).map(function(entry) {
-    return r("68747470733a2f2f63616e7661732e696e7374727563747572652e636f6d2f66696c65732f") + parseInt(entry[0]) + r("2f646f776e6c6f61643f646f776e6c6f61645f6672643d312676657269666965723d") + entry[1];
-});
-
+console.log(f)
 
 let allHtmlFiles = [];
 
@@ -77,11 +75,14 @@ function initZipButtons() {
     f.forEach((x, idx) => {
         const zipBtn = document.createElement("button");
         zipBtn.textContent = `Load ZIP ${idx + 1}`;
+		zipBtn.style.fontSize = "10px";
         zipBtn.className = "zip-button";
         zipBtn.onclick = () => loadZip(x, idx + 1, zipBtn);
         optionsDiv.appendChild(zipBtn);
     });
 }
+
+var progress = 0;
 
 async function loadZip(x, index, buttonEl) {
     buttonEl.remove();
@@ -90,6 +91,7 @@ async function loadZip(x, index, buttonEl) {
     try {
         const response = await fetch(x);
         if (!response.ok) throw new Error("Failed to fetch ZIP file " + x);
+		
         const blob = await response.blob();
         const zip = await JSZip.loadAsync(blob);
         const htmlFiles = Object.keys(zip.files)
@@ -102,7 +104,12 @@ async function loadZip(x, index, buttonEl) {
         
         allHtmlFiles.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
         renderHtmlButtons();
+		progress += 1;
+		if (progress >= f.length) {
+			wait.textContent = 'Done with everything.';
+		} else {
         wait.textContent = 'Done.'
+		}
     } catch (err) {
         console.error(err);
         alert("Error loading ZIP " + index);
