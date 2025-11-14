@@ -5,3 +5,5 @@
 5. Open a new tab and paste the link
 6. Before clicking enter, remove everything after /download.
 7. Hit enter
+
+The url will only work for the person who's logged into Canvas and uploaded the file.
