@@ -1,0 +1,3 @@
+This directory is either for games that are too large to be inlined so their assets are split and external, or multiplayer online games.
+
+The html files are very small if the assets are served on an external url.
