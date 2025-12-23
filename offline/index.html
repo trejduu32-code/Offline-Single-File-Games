@@ -1,201 +1,139 @@
-1.12.html
-1.5.html
-1.8.html
-12minibattles.html
-1on1soccer.html
-1on1tennis.html
-1v1.lol.html
-2048.html
-Alpha_1.2.6.html
-Beta_1.3.html
-Indev.html
-agariolite.html
-ageofwar.html
-ageofwar2.html
-agesofconflict.html
-amongus.html
-angrybirds.html
-angrybirdsspace.html
-awesometanks.html
-awesometanks2.html
-baconmaydie.html
-badicecream.html
-badpiggies.html
-baldisbasics.html
-baseballbros.html
-basketballstars.html
-basketbros.html
-basketrandom.html
-bitlife.html
-bitplanes.htm
-blockysnakes.html
-bloonsTD.html
-bloonsTD2.html
-bloonsTD3.html
-bloonsTD4.html
-bloonsTD5.html
-bloxorz.html
-bobtherobber.html
-bobtherobber2.html
-bobtherobber5.html
-bouncymotors.html
-boxingrandom.htm
-breakingthebank.html
-bubbleshooter.html
-candycrush.html
-chess.html
-circloO.html
-circloO2.html
-clusterrush.html
-cookieclicker.htm
-crazycars.html
-crazycattle3D.html
-crossyroad.htm
-cuttherope.html
-dadish.html
-dadish2.html
-dadish3.html
-deathchase.html
-deathrun3D.html
-dreadheadparkour.htm
-driftboss.htm
-drivemad.htm
-ducklife.html
-ducklife2.html
-ducklife3.html
-ducklife4.html
-ducklingsio.html
-elasticface.htm
-escaperoad.html
-escaperoad2.html
-escapingtheprison.html
-evilglitch.html
-fancypantsadventure.html
-fancypantsadventure2.html
-fireboyandwatergirl.html
-fireboyandwatergirl2.html
-fireboyandwatergirl3.html
-fireboyandwatergirl4.html
-flappybird.html
-fnaf.html
-fnaf2.html
-fnaf3.html
-fnaf4.html
-footballbros.html
-fruitninja.html
-funnybattle.html
-funnybattle2.html
-funnymadracing.html
-funnyshooter2.html
-geometrydash.html
-geometrydashlite.html
-getawayshootout.htm
-googledino.html
-granny.html
-granny2.html
-happywheels.html
-highwaytraffic.html
-hillclimbracinglite.html
-holeio.html
-houseofhazards.html
-jetpackjoyride.html
-jumpingshell.html
-kartbros.html
-learntofly.html
-learntofly2.html
-learntofly3.html
-leveldevil.html
-melonplayground.html
-minesweeper.html
-monkeymart.htm
-monstertracks.html
-motox3m.htm
-motox3m2.html
-motox3m3.html
-ovo.html
-ovo2.html
-pacman.html
-papasfreezeria.html
-papaspizzeria.html
-papastacomia.html
-paperio2.htm
-parkingfury.html
-parkingfury2.html
-parkingfury3.html
-picosschool.html
-pingpongchaos.html
-polytrack.html
-pou.html
-ragdollarchers.htm
-ragdollhit.html
-ragdollsoccer.html
-redball4vol1.html
-redball4vol2.html
-redball4vol3.html
-retrobowl.html
-retrobowlcollege.html
-retropingpong.html
-riddleschool.html
-riddleschool2.html
-riddleschool3.html
-riddleschool4.html
-riddleschool5.html
-riddletransfer.html
-riddletransfer2.html
-rocketsoccerderby.html
-rooftopsnipers.htm
-rooftopsnipers2.html
-run.html
-run2.html
-run3.html
-sandgame.html
-slope.html
-slope2player.html
-slope3.html
-sm63.html
-sm64.html
-snowrider.htm
-snowroad.htm
-soccerbros.html
-soccerrandom.htm
-spacewaves.html
-speedstars.html
-sprunki.html
-stack.html
-stateio.html
-stickmanhook.html
-subwaysurfersbeijing.html
-subwaysurfershavana.html
-subwaysurferssanfrancisco.html
-superstarcar.html
-tag.html
-templeofboom.html
-templerun2.htm
-territorialio.html
-thereisnog.html
-timeshooter2.html
-timeshooter3.htm
-tinyfishing.html
-tombofthemask.htm
-trapthecat.html
-tubejumpers.html
-tunnelrush.html
-unicyclehero.html
-vex5.html
-vex6.htm
-vex7.htm
-vex8.htm
-volleyrandom.html
-webecomewhatwebehold.html
-wheely.html
-wheely2.html
-wheely3.html
-wheely4.html
-wheely5.html
-/wheely6.html
-/wheely7.html
-/wheely8.html
-/worldshardestgame.html
-/worldshardestgame2.html
-/worldshardestgame3.html
-/wrestlebros.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offline Single-File Games</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#search {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 16px;
+  display: block;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  background: #1b1b1b;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card a {
+  display: block;
+  padding: 14px 8px;
+  color: #00c3ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #00ff9c;
+  background: #222;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎮 Offline Single-File Games</h1>
+
+<input id="search" placeholder="🔍 Search games..." onkeyup="filterGames()">
+
+<div class="grid" id="games">
+
+<!-- ALL GAMES -->
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/1.12.html">1.12</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/1.5.html">1.5</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/1.8.html">1.8</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/12minibattles.html">12 Mini Battles</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/1on1soccer.html">1 on 1 Soccer</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/1on1tennis.html">1 on 1 Tennis</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/1v1.lol.html">1v1.lol</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/2048.html">2048</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/Alpha_1.2.6.html">Minecraft Alpha</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/Beta_1.3.html">Minecraft Beta</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/Indev.html">Minecraft Indev</a></div>
+
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/agariolite.html">Agario Lite</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/ageofwar.html">Age of War</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/ageofwar2.html">Age of War 2</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/agesofconflict.html">Ages of Conflict</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/amongus.html">Among Us</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/angrybirds.html">Angry Birds</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/angrybirdsspace.html">Angry Birds Space</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/awesometanks.html">Awesome Tanks</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/awesometanks2.html">Awesome Tanks 2</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/baconmaydie.html">Bacon May Die</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/badicecream.html">Bad Ice Cream</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/badpiggies.html">Bad Piggies</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/baldisbasics.html">Baldi’s Basics</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/baseballbros.html">Baseball Bros</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/basketballstars.html">Basketball Stars</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/basketbros.html">Basket Bros</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/basketrandom.html">Basket Random</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/bitlife.html">BitLife</a></div>
+
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/bloonsTD.html">Bloons TD</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/bloonsTD2.html">Bloons TD 2</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/bloonsTD3.html">Bloons TD 3</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/bloonsTD4.html">Bloons TD 4</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/bloonsTD5.html">Bloons TD 5</a></div>
+
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/clusterrush.html">Cluster Rush</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/cookieclicker.htm">Cookie Clicker</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/crossyroad.htm">Crossy Road</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/cuttherope.html">Cut the Rope</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/flappybird.html">Flappy Bird</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/fnaf.html">FNAF</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/geometrydash.html">Geometry Dash</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/googledino.html">Google Dino</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/happywheels.html">Happy Wheels</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/jetpackjoyride.html">Jetpack Joyride</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/slope.html">Slope</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/vex5.html">Vex 5</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/vex6.htm">Vex 6</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/vex7.htm">Vex 7</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/vex8.htm">Vex 8</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/worldshardestgame.html">World’s Hardest Game</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/worldshardestgame2.html">World’s Hardest Game 2</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/worldshardestgame3.html">World’s Hardest Game 3</a></div>
+<div class="card"><a href="https://trejduu32-code.github.io/Offline-Single-File-Games/offline/wrestlebros.html">Wrestle Bros</a></div>
+
+</div>
+
+<script>
+function filterGames() {
+  const q = document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll(".card").forEach(card => {
+    card.style.display = card.innerText.toLowerCase().includes(q) ? "" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
